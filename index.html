@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Defina suas preferências de cookies no site suplementos agora e melhore sua experiência.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://duxs.humanwhey.info/cookies-preferences.html">
+  <meta property="og:title" content=" suplementos agora - Configuração de Cookies">
+  <meta property="og:description" content="Gerencie seus cookies no site suplementos agora para uma melhor navegação.">
+  <meta property="og:image" content="https://duxs.humanwhey.info/media/images/cookies-banner.png">
+  <title>Preferências de Cookies - suplementos agora </title>
+  
+  <script id="_wau9f7">var _wau = _wau || []; _wau.push(["small", "08yo2p42ny", "9f7"]);</script>
+  <script async src="//waust.at/s.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .banner-container {
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .banner-container h2 {
+      font-size: 24px;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    .banner-container p {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 20px;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .accept {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .reject {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h2>Configuração de Cookies</h2>
+    <p>Este site utiliza cookies para oferecer a melhor experiência. Escolha sua configuração preferida:</p>
+    <div class="action-buttons">
+      <button class="button accept" onclick="acceptCookies()">Aceitar Cookies</button>
+      <button class="button reject" onclick="rejectCookies()">Recusar Cookies</button>
+    </div>
+  </div>
+
+  <script>
+    // Funções de cookies
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      console.log('Cookies aceitos');
+      window.location.href = 'https://duxs.humanwhey.info/';
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookiesAccepted', 'false');
+      deleteCookies();
+      console.log('Cookies rejeitados');
+      window.location.href = 'https://duxs.humanwhey.info/';
+    }
+
+    function deleteCookies() {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i];
+        const eqPos = cookie.indexOf('=');
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+      }
+    }
+  </script>
+</body>
+</html>
